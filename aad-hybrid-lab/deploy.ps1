@@ -37,7 +37,7 @@ Import-Module Azure -ErrorAction SilentlyContinue
 Get-AzureRmContext -ErrorAction Stop
 
 #deploy
-$AssetLocation           = "https://raw.githubusercontent.com/Microsoft/aad-hybrid-lab/master/aad-hybrid-lab/"
+$AssetLocation           = "https://raw.githubusercontent.com/rob-mckenna/aad-hybrid-lab/master/aad-hybrid-lab/"
 
 $parms=@{
     "adminPassword"               = $secpasswd;
