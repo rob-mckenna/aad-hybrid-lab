@@ -14,6 +14,12 @@ if (!(Test-Path -Path "c:\temp")) {
     mkdir "c:\temp"
 }
 
+$step=0
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bOR [Net.SecurityProtocolType]::Tls12
+
+#record that we got this far
+New-Item -ItemType file "$($completeFile)$step"
+
 $step=1
 if (!(Test-Path -Path "$($completeFile)$step")) {
     # Shortcuts
